@@ -52,7 +52,37 @@
 
     
     <h2>HTML ENTITIES</h2>
-    <p></p>
+    <p>This isn't related to images or links as such but needs discussed before moving onto CSS.
+        An HTML entiry is a special character that can't be represented in plain text in a HTML document.
+        This typically means it's a reserved character in HTML or you don't have a key on your keyboard for it.
+    </p>
+    
+    <h3>RESERVED CHARACTERS</h3>
+    <p>The "<" ">" and "&" are called reserved characters because they aren't allowed to be inserted into a html document
+        without being encoded. This is because they mean something in the HTML syntax. 1 starts a tag, 2 ends a tag and 3 sets of a HTML entity.
+    </p>
+    <p>There are three reserved characters in HTML: &lt; &gt; and &amp;. You
+   should always use HTML entities for these three characters.</p>
+   <p>Entities always begin with an ampersand and end with a semicolon, In between you put a special code that your browser will 
+        interpret as a symbol. In this case, it interprets lt, gt, and amp as less-than, greater-than, and ampersand symbols, respectively.
+   </p>
+   <p>There's a crap-ton of HTML entities, explore here <a href="https://html.spec.whatwg.org/multipage/named-characters.html">HTML entities</a></p>
+
+   <h3>QUOTES</h3>
+   <p>Curly quotes aren't necessary, however if you care about <a href="https://internetingishard.netlify.app/html-and-css/web-typography/">typography</a> 
+        they'll be some of the most common HTML entities you'll use. There's four
+        different kinds of curly quotes (opening and closing single and double quotes):
+        <ul>
+            <li>&ldquo;</li>
+            <li>&rdquo;</li>
+            <li>&lsquo;</li>
+            <li>&rsquo;</li>
+        </ul>
+    </p>
+    <p>If you&rsquo;re into &ldquo;web typography,&rdquo; you&rsquo;ll also find
+        yourself using curly quotes quite a bit.
+    </p>
+    <p>Unlike straight quotes, these curly quote entities should hug the text.</p>
 
 </body>
 </html>
