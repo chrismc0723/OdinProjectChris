@@ -6,6 +6,110 @@
     <title>Images</title>
 </head>
 <body>
+    <p>This page covers common image formats, but you may also be looking for <a
+        href='links.html'>links</a> and <a href='../misc_extras/extras.html'>useful
+        extras</a>.</p>
     <h1>Images</h1>
+    <p>There are 4 main image formats.</p>
+    <ul>
+        <li>JPG</li>
+        <li>GIF</li>
+        <li>PNG</li>
+        <li>SVG</li>
+    </ul>
+    <h3>JPG IMAGES</h3>
+    <p>JPG images are designed for handling large colour palettes without exorbitantly increasing file size.</p>
+    <p>This makes them great for photos with lots of gradients in them.</p>
+    <p>However, JPGs don't allow transparent pixels</p>
+    <img src="../misc_extras/mochi.jpg"/>
+
+    <h3>GIF IMAGES</h3>
+    <p>GIFs are the go-to option for simple animations, but the trade off is that they are somewhat
+        limited in terms of colour palette - never use them for photos.
+    </p>
+    <p>Transparent pixels are a binary option for GIFs, meaning you can't have semi-opaque pixels.
+        Making it difficult to get high levels of detail on a transparent background. Better to use PNG images if you don't need animation
+    </p>
+    <img src="../misc_extras/mochi.gif"/>
+
+    <h3>PNG IMAGES</h3>
+    <p>PNGs are great for anything that's not a photo or animated. FOr photos, a png file of the same quality
+        would generally be bigger than an equivalent JPG file. However, they do deal with opacity just fine,
+        and they don't jave colour palette limitations. Makes it an excellent fit for icons, technical diagrams, logos, etc.
+    </p>
+    <img src="../misc_extras/mochi.png"/>
+
+    <h3>SVG IMAGES</h3>
+    <p>unlike pixel-based image formats above, SVG is a vector-based graphics format,
+        meaning it can scale up or down to any dimension without loss of quality.
+        This makes SVG images a wonderful tool for responsive design. They're good
+        for pretty much all the same use cases as PNGs, and you should use them whenever you can.
+    </p>
+    
+    <img src="../misc_extras/mochi.svg"/>
+
+    <p>There is a potential issue with SVGs: for them to display consistently across browsers,
+        you need to convert any text fields to outlines using your image editor. If your images contain a lot of text,
+        such as fancy screenshots for a tutorial, this can have a big impact on the file size. 
+    </p>
+
+    <h3>IMAGE DIMENSIONS</h3>
+    <p>By default, the img element uses the inherit dimensions of its image file. Our files are 150x150 pixels apart 
+        from the SVG mochi as that is only 75x75
+    </p>
+    <p>Pixel-based image formats need to be twice as big as you want them to appear on retina displays. To
+        get our pixel-based images down to the intended size (75x75), we can use the img element's width attribute.
+    </p>
+    <!-- JPG Image Resize-->
+    <h4>JPG Resize</h4>
+    <img src="../misc_extras/mochi.jpg" width="75"/>
+
+    <!--GIF Image Resize-->
+    <h4>GIF Resize</h4>
+    <img src="../misc_extras/mochi.gif" width="75"/>
+
+    <!--PNG Image Resize-->
+    <h4>PNG Resize</h4>
+    <img src="../misc_extras/mochi.png" width="75"/>
+
+    <p>The width attribute sets an explicit dimension for the image. There's a
+        corrosponding height attribute as well. Setting only one of them will 
+        cause the image to scale proportionally, while defining both will stretch
+        the image. Dimension values are specified in pixels, and you should never
+        include a unit.
+
+        The width and height attributes can be useful, but it's usually better 
+        to set image dimensions with CSS so you can alter them with media queries. 
+        This will be discussed later.
+    </p>
+
+    <h3>TEXT ALTERNATIVES</h3>
+    <p>Adding the alt attributes to your img elements is a best practice. it defines
+        a text alternative to the image being displayed. This has an impact on both 
+        search engines and users with text-only browsers, such as people that use 
+        text-to-speech software due to visual impairments.
+    </p>
+
+    <!--JPG adding alt-->
+    <h4>JPG Adding Alt</h4>
+    <img src="../misc_extras/mochi.jpg" width="75" alt="A mochi ball in a bubble"/>
+
+    <!--GIF adding alt-->
+    <h4>GIF Adding Alt</h4>
+    <img src="../misc_extras/mochi.gif" width="75" alt="A dancing mochi ball"/>
+
+    <!--PNG adding alt-->
+    <h4>PNG Adding Alt</h4>
+    <img src="../misc_extras/mochi.png" width="75" alt="A mochi ball"/>
+
+    <!--SVG adding alt-->
+    <h4>SVG Adding Alt</h4>
+    <img src="../misc_extras/mochi.svg" alt="A mochi ball with Bezier handles"/>
+
+
+
+    <p>For more examples on alt attribute refer to the ridiculously detailed <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#alt">official specification</a></p>
+
+
 </body>
 </html>
